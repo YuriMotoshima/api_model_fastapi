@@ -1,7 +1,9 @@
 # Passos de instalação de dependencias
+```sh
 poetry install  
 poetry add fastapi uvicorn
 poetry add --group dev pytest pytest-cov taskipy blue ruff httpx isort
+```
 
 # Passos de configuração das dependencias no toml
 ```sh
