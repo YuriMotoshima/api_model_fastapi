@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fast_zero.schemas import Message, UserSchema, UserPublic, UserDB
+from fast_zero.schemas import Message, UserSchema, UserList, UserPublic, UserDB
 
 app = FastAPI()
 
@@ -10,6 +10,11 @@ database = []
 @app.get('/', status_code=200, response_model=Message)
 def read_root():
     return {'message': 'Olá Mundo!'}
+
+
+@app.get('/users/', response_model=UserList)
+def read_users():
+    return {'users': database}
 
 
 @app.post('/users/', status_code=201, response_model=UserPublic)
