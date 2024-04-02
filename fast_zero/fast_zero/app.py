@@ -18,8 +18,11 @@ def read_root():
 
 
 @app.get('/users/', response_model=UserList)
-def read_users():
-    return {'users': database}
+def read_users(
+    skip: int = 0, limit: int = 100, session: Session = Depends(get_session)
+):
+    users = session.scalars(select(User).offset(skip).limit(limit)).all()
+    return {'users': users}
 
 
 @app.post('/users/', response_model=UserPublic, status_code=201)
@@ -62,3 +65,5 @@ def delete_user(user_id: int):
     del database[user_id - 1]
 
     return {'message': 'User deleted'}
+
+

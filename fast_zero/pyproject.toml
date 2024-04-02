@@ -44,8 +44,8 @@ pythonpath = "."
 extend-exclude = '(migrations/)'
 
 [tool.taskipy.tasks]
-lint = 'ruff . && blue --check . --diff'
-format = 'blue .  && isort .'
+lint = 'ruff .'
+format = 'isort .'
 run = 'uvicorn fast_zero.app:app --reload'
 pre_test = 'task lint'
 test = 'pytest -s -x --cov=fast_zero -vv'
