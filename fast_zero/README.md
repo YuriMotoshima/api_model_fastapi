@@ -1,4 +1,6 @@
+```sh
 All project is reference about this (https://fastapidozero.dunossauro.com/)
+```
 
 # Passos de instalação de dependencias
 ```sh
@@ -43,6 +45,9 @@ uvicorn fast_zero.app:app
 
 
 # DB
+
+# echo 'database.db' >> .gitignore
+
 
 Instalando o Alembic e Criando a Primeira Migração
 Antes de avançarmos, é importante entender o que são migrações de banco de dados e por que são úteis. As migrações são uma maneira de fazer alterações ou atualizações no banco de dados, como adicionar uma tabela ou uma coluna a uma tabela, ou alterar o tipo de dados de uma coluna. Elas são extremamente úteis, pois nos permitem manter o controle de todas as alterações feitas no esquema do banco de dados ao longo do tempo. Elas também nos permitem reverter para uma versão anterior do esquema do banco de dados, se necessário.

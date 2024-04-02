@@ -7,5 +7,3 @@ class Settings(BaseSettings):
     )
 
     DATABASE_URL: str
-
-# echo 'database.db' >> .gitignore

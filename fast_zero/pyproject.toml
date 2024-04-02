@@ -13,13 +13,13 @@ pydantic = {extras = ["email"], version = "^2.6.4"}
 sqlalchemy = "^2.0.29"
 pydantic-settings = "^2.2.1"
 alembic = "^1.13.1"
+blue = "^0.9.1"
 
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
 pytest-cov = "^4.1.0"
 taskipy = "^1.12.2"
-blue = "^0.9.1"
 ruff = "^0.2.0"
 httpx = "^0.26.0"
 isort = "^5.13.2"
